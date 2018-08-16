@@ -78,13 +78,3 @@ void main()
 	print("independence");
 	while(1);
 }
-# AVR-LCD
-# AVR-LCD
-# AVR-LCD
-# avr-lcd
-# avrlcd
-# avrlcd
-# avrlcd
-# avrlcd
-# avrlcd
-# AVR-LCD
