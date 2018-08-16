@@ -3,15 +3,15 @@
 void cmd(unsigned char ch1)
   {
           unsigned char ch2;
-	  ch2 = (ch1 & 0xf0) >> 4;
+	  ch2 = (ch1 & 0xf0) >> 4;     //sending the higher nibble
 	  PORTC = ch2;
-          PORTD &= ~(1<<2);
+          PORTD &= ~(1<<2);           // RS = 0 for cmd
 	  PORTD &= ~(1<<3);
 	  PORTD |= (1<<4);
 	  _delay_us(1);
 	  PORTD &= ~(1<<4); 
           _delay_us(100);
-          ch2 = ch1 & 0x0f;
+          ch2 = ch1 & 0x0f;         //sending the lower nibble
 	  PORTC = ch2;	
 	  PORTD |= (1<<4);
 	  _delay_us(1);
@@ -25,7 +25,7 @@ void data(unsigned char ch3)
           unsigned char ch4;
 	  ch4 = (ch3 & 0xf0) >> 4;
 	  PORTC = ch4;
-	  PORTD |= (1<<2);
+	  PORTD |= (1<<2);          //RS = 1 for data. rest function is same
 	  PORTD &= ~(1<<3);
 	  PORTD |= (1<<4);
 	  _delay_us(1);
@@ -74,7 +74,7 @@ void main()
 	init();
 	gotoxy(1,1);
 	print("happy");
-	gotoxy(1,2);
+	gotoxy(1,2);              //2nd line
 	print("independence");
 	while(1);
 }
