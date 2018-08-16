@@ -1,3 +1,0 @@
-# AVR-LCD
-# AVR-LCD
-# AVR-LCD
