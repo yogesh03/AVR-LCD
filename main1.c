@@ -8,7 +8,7 @@ void cmd(unsigned char ch1)
           PORTD &= ~(1<<2);
 	  PORTD &= ~(1<<3);
 	  PORTD |= (1<<4);
-i	  _delay_us(1);
+	  _delay_us(1);
 	  PORTD &= ~(1<<4); 
           _delay_us(100);
           ch2 = ch1 & 0x0f;
