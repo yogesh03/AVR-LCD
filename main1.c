@@ -1,4 +1,4 @@
-:#include<avr/io.h>
+#include<avr/io.h>
 #include<util/delay.h>
 void cmd(unsigned char ch1)
   {
@@ -78,5 +78,4 @@ void main()
 	print("independence");
 	while(1);
 }
-
 # AVR-LCD
